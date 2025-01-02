@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 'Admin Entry'
+title: 'adminentry'
 subtitle: ''
 description: ''
 keywords:
-author: Admin
+author: adminentry
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ectinge.github.io/adminentry
-root: /
+url: https://ectinge.github.io/adminentry
+root: /adminentry/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -95,16 +95,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: cactus
 
-encrypt: # hexo-blog-encrypt
-  abstract: Blog encrypted, password is required to continue reading.
-  message: Please enter password
-  tags:
-  - {name: locked, password: russell}
-  template: <div id="hexo-blog-encrypt" data-wpm="{{hbeWrongPassMessage}}" data-whm="{{hbeWrongHashMessage}}"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="{{hbeMessage}}" /><label>{{hbeMessage}}</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="{{hbeHmacDigest}}">{{hbeEncryptedData}}</script></div>
-  wrong_pass_message: Invalid password. Check and try again, please.
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
-
+  type: git
+  repo: https://github.com/ectinge/adminentry
+  branch: gh-pages
